@@ -1,0 +1,282 @@
+* {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background_font_color: black;
+  --second_background_font_color: white;
+  --third_background_font_color: #1F2833;
+  --special_font_color:#B4FFA8;
+}
+
+h1 {
+  font-size: 140px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+}
+
+span {
+  color:var(--special_font_color);
+}
+
+.dashed-text {
+  text-decoration: underline dashed ;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Here is navbar part of code*/
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 7vh;
+  width: 100vw;
+  background-color: var(--third_background_font_color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#navbar > a {
+  text-decoration: none;
+  color: var(--second_background_font_color);
+  margin: 0 4% 0 4%;
+  padding: 0 10px 0 10px;
+  font-size: 20px;
+}
+
+#navbar > a:hover {
+  color: var(--special_font_color);
+  text-decoration: underline dashed;
+  }
+
+/* Here is 1st screen-section "welcome-section" */
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background_font_color);
+  color: var(--second_background_font_color);
+  width: 100vw;
+  height: 100vh;
+  margin: none;
+}
+
+.welcome-text {
+  text-align: center;
+  margin: auto;
+  line-height: 28px;
+}
+
+.divider {
+  margin-top: -50px;
+  background-color: var(--second_background_font_color);
+  width: 0px;
+  height: 0px;
+	border-left: 50vw solid transparent;
+	border-right: 50vw solid transparent;
+	border-top: 60px solid var(--background_font_color);
+}
+
+/* Here is 2nd screen-section "skills-section" */
+
+#skills {
+  background-color: var(--second_background_font_color);
+  color: var(--background_font_color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+#skills > div {
+  margin-bottom: 30px;
+}
+
+.scale {
+  display: block;
+  border: 1px solid var(--background_font_color);
+  width: 50%;
+  height: 20px;
+  margin: 1% auto ;
+}
+
+.scale-header {
+  margin: auto;
+  width: 20%;
+}
+
+.scale.html {
+  background: linear-gradient(
+    90deg,
+    var(--background_font_color) 0%, 
+    var(--background_font_color) 50%,
+    var(--second_background_font_color) 50%,
+    var(--second_background_font_color) 100%
+    );
+}
+
+.scale.css {
+  background: linear-gradient(
+    90deg,
+    var(--background_font_color) 0%, 
+    var(--background_font_color) 40%,
+    var(--second_background_font_color) 40%,
+    var(--second_background_font_color) 100%
+    );
+}
+
+.scale.cats {
+  background: linear-gradient(
+    90deg,
+    var(--background_font_color) 0%, 
+    var(--background_font_color) 90%,
+    var(--second_background_font_color) 90%,
+    var(--second_background_font_color) 100%
+    );
+}
+
+.scale-basement {
+  margin: 50px auto;
+  width: 90%;
+  font-style: italic;
+}
+
+/* Here is 3rd screen-section "project-section" */
+
+#projects {
+  background-color: var(--background_font_color) ;
+  width: 100vw;
+  height: 150vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 10px;
+  padding-bottom: 80px;
+}
+
+.project-header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center; 
+  color: var(--second_background_font_color);
+  padding-top: 80px;
+}
+
+.project-img {
+  width: 40vw;
+  min-width: 320px;
+  background-color: var(--third_background_font_color);
+  padding:10px;
+  border-radius: 15px;
+}
+
+.project-tile{
+  text-align: center;
+  font-style: italic;
+}
+
+.project-tile:hover {
+  animation-name: bigger-state;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+figcaption > a {
+  text-decoration: none;
+  color: var(--second_background_font_color);
+  font-size: 20px;
+}
+
+
+figcaption > a:hover {
+  color: var(--special_font_color);
+  text-decoration: underline dashed;
+}
+
+/* Here is 4th screen-section "contact-section" */
+
+#contact {
+  background-color: var(--second_background_font_color);
+  color: var(--background_font_color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-img {
+  width: 5vw;
+  max-width: 100px;
+  min-width:70px;
+  border-radius: 20%;
+  margin: 40px;
+}
+
+.contact-img:hover {
+  animation-name: move-down;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.added-sign {
+  margin-top: -10px;
+}
+
+.contact-icons-block {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 720px) {
+  #projects {
+    display: flex;
+    flex-direction: column;
+    height: 260vh;
+  }
+}
+
+.div-footer {
+  background-color: var(--second_background_font_color);
+  color: var(--third_background_font_color);
+  font-style: italic;
+  border-top: 2px dashed var(--third_background_font_color);
+  font-size: 16px;
+}
+
+@keyframes move-down {
+  0% {
+     transform: translateY(0);
+  }
+  100% {
+     transform: translateY(15px);
+  }
+}
+
+@keyframes bigger-state {
+  0% {
+     transform: scale(1);
+  }
+  100% {
+     transform: scale(1.10);
+  }
+}
